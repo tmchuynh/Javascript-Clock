@@ -3,6 +3,7 @@ let clock = () => {
     let hrs = date.getHours();
     let mins = date.getMinutes();
     let secs = date.getSeconds();
+    let n = date.toDateString();
     let period = "AM";
     if (hrs == 0) {
         hrs = 12;
@@ -16,7 +17,17 @@ let clock = () => {
 
     let time = `${hrs}:${mins}:${secs}:${period}`;
     document.getElementById("clock").innerText = time;
+    document.getElementById("date").innerText = n;
     setTimeout(clock, 1000);
 };
 
+let date = () => {
+    let date = new Date();
+
+
+
+}
+
 clock();
+
+date();
